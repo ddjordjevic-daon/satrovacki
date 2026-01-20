@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satrovacki Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="text" id="inputBox" placeholder="Enter text here">
+    <button id="convertButton">Prevedi</button>
+    <textarea id="outputBox" placeholder="Output will appear here" readonly></textarea>
+
+    <script src="converter.js"></script>
+    <script>
+        document.getElementById('convertButton').addEventListener('click', function() {
+            const inputText = document.getElementById('inputBox').value;
+            const outputText = convertSentence(inputText);
+            document.getElementById('outputBox').value = outputText;
+        });
+    </script>
+</body>
+</html>
